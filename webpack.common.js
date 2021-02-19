@@ -6,15 +6,9 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
-    mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
-    },
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        port: 4200
     },
     plugins: [
         new HtmlWebpackPlugin({
